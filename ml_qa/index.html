@@ -1,0 +1,1109 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://melodymd.github.io/MLE101/ml_qa/">
+      
+      
+        <link rel="prev" href="../ml_coding/">
+      
+      
+        <link rel="next" href="../ml_system_design/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>ML Q&A - MLE101</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ml-qa" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MLE101" class="md-header__button md-logo" aria-label="MLE101" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MLE101
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ML Q&A
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../coding/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Coding
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ml_coding/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ML Coding
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ML Q&A
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ml_system_design/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ML System Design
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MLE101" class="md-nav__button md-logo" aria-label="MLE101" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MLE101
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml_coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ML Coding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ML Q&A
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ML Q&A
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      ML Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Learning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-architecture-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Architecture &amp; Inference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-fine-tuning-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Fine-Tuning Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-training-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Training Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval-Augmented Generation (RAG)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blogs &amp; Articles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blogs &amp; Articles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      General ML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers-dl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformers &amp; DL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Papers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#courses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Courses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml_system_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ML System Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      ML Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Learning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-architecture-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Architecture &amp; Inference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-fine-tuning-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Fine-Tuning Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-training-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Training Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieval-Augmented Generation (RAG)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs-articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blogs &amp; Articles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blogs &amp; Articles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      General ML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformers-dl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformers &amp; DL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Papers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#courses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Courses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ml-qa">ML Q&amp;A</h1>
+<hr />
+<h2 id="fundamental-concepts">Fundamental Concepts</h2>
+<ul>
+<li>What is bias vs variance?</li>
+<li>What is overfitting vs underfitting?</li>
+<li>How does regularization help prevent overfitting?</li>
+<li>What is the difference between L1 and L2 regularization?</li>
+<li>What is the difference between generative and discriminative models?</li>
+<li>What is the difference between supervised and unsupervised learning?</li>
+<li>What is the difference between LDA and PCA?</li>
+<li>What is the curse of dimensionality?</li>
+</ul>
+<hr />
+<h2 id="evaluation-metrics">Evaluation Metrics</h2>
+<ul>
+<li>What are precision, recall, and F1 score?</li>
+<li>What is an ROC curve, and how is it used?</li>
+<li>What is AUC and how is it interpreted?</li>
+<li>What is log loss / cross-entropy loss?</li>
+<li>What are confusion matrices and how do you interpret them?</li>
+<li>What is the difference between micro, macro, and weighted averaging in classification metrics?</li>
+<li>How do you evaluate a model for multi-class vs multi-label classification?</li>
+<li>What metrics are suitable for ranking models? </li>
+</ul>
+<hr />
+<h2 id="optimization">Optimization</h2>
+<ul>
+<li>How does gradient descent work?</li>
+<li>What is stochastic gradient descent, and how is it different from full-batch gradient descent?</li>
+<li>What is backward propagation, and how does it relate to neural networks?</li>
+<li>What are common variants of gradient descent (SGD, Momentum, Adam, RMSProp)?</li>
+<li>What are vanishing and exploding gradients?</li>
+<li>How does learning rate affect training?</li>
+<li>What is gradient clipping and why is it used?</li>
+<li>How do optimizers differ in convergence speed and stability?</li>
+</ul>
+<hr />
+<h2 id="ml-algorithms">ML Algorithms</h2>
+<ul>
+<li>What is logistic regression? (forward calculation, loss function)</li>
+<li>What is K-Nearest Neighbors (KNN)?</li>
+<li>What is decision tree learning?</li>
+<li>What is random forest, and how does it differ from gradient boosting?</li>
+<li>What is the difference between bagging and boosting?</li>
+<li>What is K-Means clustering, and how does it work?</li>
+<li>What is Support Vector Machine (SVM)?</li>
+<li>What is Bayesian learning?</li>
+<li>What is the difference between MAP and MLE?</li>
+<li>What is Naive Bayes and when is it effective?</li>
+<li>What are the assumptions behind linear regression?</li>
+<li>How does ridge regression differ from lasso regression?</li>
+<li>What are the strengths and weaknesses of tree-based methods?</li>
+<li>What are ensemble methods, and why do they work?</li>
+</ul>
+<hr />
+<h2 id="data-issues">Data Issues</h2>
+<ul>
+<li>How does imbalanced data affect model performance?</li>
+<li>What are common strategies to handle imbalanced data?</li>
+<li>What is data drift and how do you handle it?</li>
+<li>How to handle missing data in ML pipelines?</li>
+<li>How do you split your data into train/validation/test?</li>
+<li>What are the benefits and risks of oversampling and undersampling?</li>
+</ul>
+<hr />
+<h2 id="deep-learning">Deep Learning</h2>
+<ul>
+<li>What is the ReLU activation function?</li>
+<li>How to deal with gradient vanishing?</li>
+<li>What are common activation functions and when to use them (ReLU, sigmoid, tanh, GELU, etc.)?</li>
+<li>What are fully connected layers?</li>
+<li>What is the role of initialization in deep learning?</li>
+<li>What is dropout and how does it prevent overfitting?</li>
+<li>What is an epoch, batch, and iteration?</li>
+<li>What is early stopping and how does it help generalization?</li>
+<li>What is the difference between feedforward networks and recurrent networks?</li>
+</ul>
+<hr />
+<h2 id="transformers">Transformers</h2>
+<ul>
+<li>Why do we divide the attention score by √dₖ in the Transformer?</li>
+<li>Why are different weight matrices used to compute Q, K, and V?</li>
+<li>Why do we use Multi-Head Attention?</li>
+<li>What is the time complexity of attention?</li>
+<li>What is KV cache and why is it used?</li>
+<li>What is Multi-Query Attention (MQA)?</li>
+<li>What is Grouped Query Attention (GQA)?</li>
+<li>What are the shapes of Q, K, V in MHA, MQA, and GQA?</li>
+<li>What is Flash Attention and how does it work?</li>
+<li>How to optimize memory usage in attention mechanisms?</li>
+</ul>
+<hr />
+<h2 id="llm-architecture-inference">LLM Architecture &amp; Inference</h2>
+<ul>
+<li>What are the key factors that affect LLM inference latency?</li>
+<li>What are common LLM inference optimization techniques?</li>
+<li>What is KV cache and how does it improve inference?</li>
+<li>What is smart batching and how does it affect performance?</li>
+<li>What is quantization and how does it help inference?</li>
+<li>What is the tradeoff in using MQA or GQA?</li>
+</ul>
+<hr />
+<h2 id="llm-fine-tuning-techniques">LLM Fine-Tuning Techniques</h2>
+<ul>
+<li>What are typical fine-tuning methods for LLMs?</li>
+<li>What is LoRA and how does it work?</li>
+<li>How is the loss calculated in supervised fine-tuning (SFT)?</li>
+<li>What is the difference between prefix tuning and prompt tuning?</li>
+<li>What is RLHF and how does it work?</li>
+</ul>
+<hr />
+<h2 id="llm-training-optimization">LLM Training Optimization</h2>
+<ul>
+<li>What is mixed-precision training and how does it work?</li>
+<li>What are the benefits and tradeoffs of FP16 vs BF16?</li>
+<li>What is gradient checkpointing?</li>
+<li>What is Distributed Data Parallel (DDP)?</li>
+<li>What is Fully Sharded Data Parallel (FSDP)?</li>
+<li>What is ZeRO (Zero Redundancy Optimizer) and its stages?</li>
+<li>How does ZeRO enable large-scale model training?</li>
+</ul>
+<hr />
+<h2 id="retrieval-augmented-generation-rag">Retrieval-Augmented Generation (RAG)</h2>
+<ul>
+<li>Why use RAG for LLMs?</li>
+<li>How does RAG architecture work?</li>
+<li>What are the steps to build a RAG-based chatbot?</li>
+</ul>
+<hr />
+<hr />
+<h2 id="learning-resources">Learning Resources</h2>
+<h3 id="github-repositories">GitHub Repositories</h3>
+<ul>
+<li><a href="https://github.com/andrewekhalel/MLQuestions">andrewekhalel / MLQuestions</a><br />
+  A curated list of ML interview questions categorized by topic, with some helpful explanations.</li>
+<li><a href="https://github.com/khangich/machine-learning-interview">khangich / machine-learning-interview</a><br />
+  Interview prep notebook covering theory and code implementations for ML algorithms.</li>
+</ul>
+<hr />
+<h3 id="blogs-articles">Blogs &amp; Articles</h3>
+<h4 id="general-ml">General ML</h4>
+<ul>
+<li><a href="https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/">Multicollinearity in Regression Analysis</a> – Statistics by Jim<br />
+  Explains the impact of multicollinearity on model interpretability and stability.</li>
+<li><a href="https://sebastianraschka.com/Articles/2014_about_feature_scaling.html">Feature Scaling Overview</a> – Sebastian Raschka<br />
+  Covers different scaling techniques and their effect on ML models.</li>
+<li><a href="https://medium.com/@aravanshad/gradient-boosting-versus-random-forest-cfa3fa8f0d80">Gradient Boosting vs Random Forest</a><br />
+  An intuitive side-by-side comparison with examples.</li>
+<li><a href="https://www.linkedin.com/pulse/intuitive-visual-explanation-differences-between-l1-l2-xiaoli-chen/">L1 vs L2 Regularization (Visual Explanation)</a><br />
+  Illustrates geometric differences and impact on sparsity.</li>
+<li><a href="https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c">PCA Explained</a><br />
+  A step-by-step walkthrough of PCA with visuals.</li>
+<li><a href="https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc">Logistic Regression Detailed Overview</a><br />
+  Covers math, intuition, and loss functions.</li>
+</ul>
+<h4 id="clustering">Clustering</h4>
+<ul>
+<li><a href="https://stanford.edu/~cpiech/cs221/handouts/kmeans.html">K-Means Intuition (Stanford CS221)</a><br />
+  Visual and interactive explanation of the K-Means algorithm.</li>
+</ul>
+<h4 id="transformers-dl">Transformers &amp; DL</h4>
+<ul>
+<li><a href="https://medium.com/@sachinsoni600517/cross-attention-in-transformer-f37ce7129d78">Cross-Attention in Transformers</a><br />
+  Cross Attention Explanation.</li>
+<li><a href="https://www.linkedin.com/pulse/understanding-batch-normalization-layer-group-implementing-pasha-s/">BatchNorm vs LayerNorm</a><br />
+  Explains when and why to use each normalization technique.</li>
+<li><a href="https://www.geeksforgeeks.org/bagging-vs-boosting-in-machine-learning/">Bagging vs Boosting</a><br />
+  Good summary for tree-based ensemble learners.</li>
+</ul>
+<hr />
+<h3 id="research-papers">Research Papers</h3>
+<ul>
+<li><em><a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a></em> – Vaswani et al.<br />
+  The original paper that introduced the Transformer architecture.</li>
+<li><em>CLIP: Learning Transferable Visual Models From Natural Language</em><br />
+<a href="https://openai.com/research/clip">CLIP Paper (OpenAI)</a> – Vision-language model combining image and text representations.</li>
+</ul>
+<hr />
+<h3 id="courses">Courses</h3>
+<ul>
+<li>
+<p><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization (Coursera by Andrew Ng)</a><br />
+  A five-course series covering neural networks, CNNs, RNNs, optimization, and structuring deep learning projects. Ideal for building strong foundational intuition.</p>
+</li>
+<li>
+<p><a href="https://www.deeplearning.ai/courses/generative-ai-with-llms/">Generative AI with LLMs (DeepLearning.AI)</a><br />
+  Covers modern LLM workflows, from prompt engineering to RAG and fine-tuning.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
