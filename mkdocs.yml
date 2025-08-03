@@ -1,16 +1,24 @@
 site_name: MLE101
 site_url: https://melodymd.github.io/MLE101/
+
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: light green
+      accent: teal
   features:
     - navigation.tabs
     - navigation.top
-    - search.highlight
     - content.code.copy
 
 nav:
   - Home: index.md
-  - Coding: coding.md
-  - ML Coding: ml_coding.md
-  - ML Q&A: ml_qa.md
-  - ML System Design: ml_system_design.md
+  - Coding:
+      - Overview: coding.md
+  - ML Coding:
+      - Overview: ml_coding.md
+  - ML Q&A:
+      - Overview: ml_qa.md
+  - ML System Design:
+      - Overview: ml_system_design.md
