@@ -66,7 +66,7 @@
 
 ### English
 - [NeetCode](https://neetcode.io/)
-- [labuladong Algo Notes](https://labuladong.online/algo/en/home/)
+- [Labuladong Algo Notes](https://labuladong.online/algo/en/home/)
 - Meta Top 200 leetcode questions
 
 ### Chinese

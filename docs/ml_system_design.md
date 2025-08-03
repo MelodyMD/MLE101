@@ -38,8 +38,8 @@
   Focuses on coding + system design for MLEs, with real-world case studies and Q&A format.
 
 - **Alex Xu's Books**  
-  - *Machine Learning System Design Interview* – Case studies and interview strategy.  
-  - *Generative AI System Design Interview* – Focused on LLM and RAG use cases (newer, 2024+).
+  - *Machine Learning System Design Interview*
+  - *Generative AI System Design Interview*
 
 - Company's Tech Blog 
 

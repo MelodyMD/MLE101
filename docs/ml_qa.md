@@ -168,16 +168,14 @@
   A step-by-step walkthrough of PCA with visuals.
 - [Logistic Regression Detailed Overview](https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc)  
   Covers math, intuition, and loss functions.
-- [Decision Trees: A Simple Yet Powerful Algorithm](https://towardsdatascience.com/decision-trees-d07e0f420175)  
-  Explains tree splitting, overfitting, and pruning.
 
 #### Clustering
 - [K-Means Intuition (Stanford CS221)](https://stanford.edu/~cpiech/cs221/handouts/kmeans.html)  
   Visual and interactive explanation of the K-Means algorithm.
 
 #### Transformers & DL
-- [Cross-Attention in Transformers](https://vaclavkosar.com/ml/cross-attention-in-transformer-architecture)  
-  Practical use cases and implementation notes.
+- [Cross-Attention in Transformers](https://medium.com/@sachinsoni600517/cross-attention-in-transformer-f37ce7129d78)  
+  Cross Attention Explanation.
 - [BatchNorm vs LayerNorm](https://www.linkedin.com/pulse/understanding-batch-normalization-layer-group-implementing-pasha-s/)  
   Explains when and why to use each normalization technique.
 - [Bagging vs Boosting](https://www.geeksforgeeks.org/bagging-vs-boosting-in-machine-learning/)  
@@ -199,6 +197,6 @@
 - [Deep Learning Specialization (Coursera by Andrew Ng)](https://www.coursera.org/specializations/deep-learning)  
   A five-course series covering neural networks, CNNs, RNNs, optimization, and structuring deep learning projects. Ideal for building strong foundational intuition.
 
-- [Generative AI with LLMs (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/generative-ai-with-llms/)  
+- [Generative AI with LLMs (DeepLearning.AI)](https://www.deeplearning.ai/courses/generative-ai-with-llms/)  
   Covers modern LLM workflows, from prompt engineering to RAG and fine-tuning.
 
