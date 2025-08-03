@@ -1,1 +1,16 @@
-site_name: My Docs
+site_name: MLE101
+site_url: https://melodymd.github.io/MLE101/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Coding: coding.md
+  - ML Coding: ml_coding.md
+  - ML Q&A: ml_qa.md
+  - ML System Design: ml_system_design.md

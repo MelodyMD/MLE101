@@ -37,9 +37,9 @@
 - [Grokking the Machine Learning Interview (Educative.io)](https://www.educative.io/courses/grokking-the-machine-learning-interview)  
   Focuses on coding + system design for MLEs, with real-world case studies and Q&A format.
 
-- **Alex Xu's Books**  
-  - *Machine Learning System Design Interview*
-  - *Generative AI System Design Interview*
+- **Alex Xu's Books**
+  - *Machine Learning System Design Interview* 
+  - *Generative AI System Design Interview* 
 
 - Company's Tech Blog 
 

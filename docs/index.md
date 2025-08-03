@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Welcome to MLE101
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a place presenting questions list/checklist and learning resources for MLE interview. 
 
-## Commands
+## Sections
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- [Coding](coding.md): Algorithms and coding
+- [ML Coding](ml_coding.md): Classic ML implementations questions
+- [ML Q&A](ml_qa.md): Frequently asked ML, DL, and GenAI questions
+- [ML System Design](ml_system_design.md): High-level ML design problems
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
