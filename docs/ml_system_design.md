@@ -43,7 +43,5 @@
 
 - Company's Tech Blog 
 
-- test
-
 ---
 
