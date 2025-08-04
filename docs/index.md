@@ -17,6 +17,4 @@ This is a place presenting questions list/checklist and learning resources for M
 - Author: **大只大只喵** (小红书 / RedNote)
 
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-  data-cf-beacon='{"token": "your-real-token-here"}'></script>
-
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "631aa14f852744a7a8bc65693277db8a"}'></script>
