@@ -18,15 +18,15 @@
 
 ### Deep Learning Foundations
 - Convolutional Neural Network (CNN)
-  - Convolution Layer
-  - Pooling Layer (Max, Average)
+    Convolution Layer
+    Pooling Layer (Max, Average)
 - Graph Neural Network (GNN)
-  - Message Passing Mechanism
+    Message Passing Mechanism
 - Transformer
-  - Query / Key / Value Computation
-  - Scaled Dot-Product Attention
-  - Positional Encoding
-  - Layer Normalization
+    Query / Key / Value Computation
+    Scaled Dot-Product Attention
+    Positional Encoding
+    Layer Normalization
 
 
 ---
