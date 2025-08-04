@@ -9,3 +9,11 @@ This is a place presenting questions list/checklist and learning resources for M
 - [ML Q&A](ml_qa.md): Frequently asked ML, DL, and GenAI questions
 - [ML System Design](ml_system_design.md): High-level ML design problems
 
+---
+
+## 🔗 Connect
+
+- GitHub Repo: [MLE101 on GitHub](https://github.com/MelodyMD/MLE101)
+- Author: **大只大只喵** (小红书 / RedNote)
+
+
