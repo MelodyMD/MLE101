@@ -17,3 +17,6 @@ This is a place presenting questions list/checklist and learning resources for M
 - Author: **大只大只喵** (小红书 / RedNote)
 
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "your-real-token-here"}'></script>
+
